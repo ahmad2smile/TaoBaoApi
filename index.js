@@ -4,5 +4,8 @@
 // GET products as search
 // require("./productsSearch/productsSearch")
 
-// GET products as search
+// GET Trades sold
 require("./trades/tradesSoldGet")
+
+// GET Trade
+// require("./trades/tradeGet")
