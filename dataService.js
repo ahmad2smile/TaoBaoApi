@@ -20,7 +20,7 @@ function getSeller() {
 	let data = {
 		app_key: "test",
 		cid: 50011999,
-		fields: "product_id,outer_id",
+		fields: "product_id,name,pic_url,cid,props,price,tsc",
 		format: "json",
 		method: "taobao.products.search",
 		session: "6101218cc8ec11f231240c3af01dcde3bc8332cc67bdcb42074082786",
