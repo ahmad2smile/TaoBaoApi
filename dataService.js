@@ -14,20 +14,9 @@ const api = axios.create({
 	}
 })
 
-function getSeller() {
+module.exports.getData = function(data) {
 	// ascending sort is required for Hash gen
 	// partner_id: "apidoc",
-	let data = {
-		app_key: "test",
-		cid: 50011999,
-		fields: "product_id,name,pic_url,cid,props,price,tsc",
-		format: "json",
-		method: "taobao.products.search",
-		session: "6101218cc8ec11f231240c3af01dcde3bc8332cc67bdcb42074082786",
-		sign_method: "hmac",
-		timestamp: getTimeForZone("Asia/Ulaanbaatar", "YYYY-MM-DD HH:mm:ss"),
-		v: "2.0"
-	}
 
 	const app_secret = "test"
 	const values = Object.values(data)
@@ -53,7 +42,3 @@ function getSeller() {
 process.stdout.write("\x1Bc")
 
 console.log("------------- INPUT START ------------")
-getSeller().then(
-	res => console.log(res.data.products_search_response.products.product),
-	err => console.log(err.message)
-)
